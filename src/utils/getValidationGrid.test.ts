@@ -1,4 +1,4 @@
-import { getValidationGrid } from './getValidationGrid';
+import { getValidationGrid } from '.';
 import { Grid, ValidationGrid } from '../shared/types';
 
 describe('Grid validation', () => {

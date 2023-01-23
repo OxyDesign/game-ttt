@@ -1,7 +1,5 @@
-import { setCellValueInGrid } from './setCellValueInGrid';
+import { setCellValueInGrid, createEmptyGrid } from '.';
 import { Grid, Cell } from '../shared/types';
-
-const createEmptyGrid = (size: number) => Array.from(Array(size)).map(row => Array.from(Array(size)).map(cell => null));
 
 describe('Grid addition', () => {
     const tests: {size: number, value: Cell, row: number, col: number, grid: Grid}[] = [
