@@ -14,8 +14,11 @@ export const Resize: FC<ResizeProps> = () => {
 
   return (
     <div className={styles.resize}>
-      <label htmlFor="size">Size: {size}</label>
+      <label htmlFor="size" className={styles.label}>
+        Size: {size}
+      </label>
       <input
+        className={styles.range}
         type="range"
         min={minSize}
         max={maxSize}

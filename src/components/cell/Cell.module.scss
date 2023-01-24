@@ -28,10 +28,11 @@
 
 .cell {
   @apply flex
-        justify-center
-        items-center
-        border
-        border-stone-200;
+    justify-center
+    items-center
+    border
+    border-stone-200
+    focus-visible:outline-indigo-300;
 
   @each $size in consts.$sizes {
     &.size-#{$size} {

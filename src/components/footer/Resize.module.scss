@@ -1,3 +1,30 @@
 .resize {
   @apply flex gap-2 items-center;
 }
+
+.label {
+  @apply flex shrink-0;
+}
+
+.range {
+  -webkit-appearance: none;
+  @apply w-full bg-transparent py-1 focus-visible:outline-indigo-300 focus-visible:outline-offset-4;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @apply h-4 w-4 -mt-1 rounded-full	bg-indigo-300 border border-solid border-indigo-400 bg-white cursor-pointer;
+  }
+
+  &::-moz-range-thumb {
+    @apply h-4 w-4 rounded-full	bg-indigo-300 border border-solid border-indigo-400 bg-white cursor-pointer;
+  }
+
+  &::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    @apply h-2 rounded-xl bg-indigo-300;
+  }
+
+  &::-moz-range-track {
+    @apply w-full h-2 rounded-xl bg-indigo-300;
+  }
+}
