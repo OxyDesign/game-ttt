@@ -1,5 +1,10 @@
 .resize {
-  @apply flex gap-2 items-center;
+  @apply flex
+    gap-3
+    portrait:flex-col
+    portrait:gap-0
+    sm:flex-row
+    items-center;
 }
 
 .label {

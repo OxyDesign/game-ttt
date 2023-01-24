@@ -1,3 +1,10 @@
 .header {
-  @apply flex pt-6 w-full justify-between items-center;
+  @apply flex
+    pt-6
+    w-full
+    gap-4
+    portrait:flex-col
+    sm:flex-row
+    justify-between
+    items-center;
 }
