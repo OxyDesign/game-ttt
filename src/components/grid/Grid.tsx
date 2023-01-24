@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import cn from 'classnames';
@@ -19,9 +20,10 @@ export const Grid: FC<GridProps> = () => {
   return (
     <div className={styles.grid}>
       {grid.map((row, i) => (
-        <div className={cn(styles[`size-${size}`], styles.row, 'row')}>
+        <div key={`${size}-${i}`} className={cn(styles[`size-${size}`], styles.row, 'row')}>
           {row.map((cell, j) => (
             <Cell
+              key={`${size}-${i}-${j}`}
               active={!hasWinner}
               value={cell}
               isInLine={validationGrid[i][j]}

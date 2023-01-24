@@ -36,7 +36,7 @@ export const Resize: FC<ResizeProps> = () => {
       />
       <datalist id="sizes">
         {gameSizes.map((gameSize) => (
-          <option value={gameSize} label={gameSize.toString()} />
+          <option key={gameSize.toString()} value={gameSize} label={gameSize.toString()} />
         ))}
       </datalist>
     </div>
