@@ -1,0 +1,30 @@
+@use '../../shared/constants' as consts;
+
+.grid {
+  $gridSize: min(70vw, 70vh);
+
+  width: $gridSize;
+  height: $gridSize;
+  min-width: $gridSize;
+  min-height: $gridSize;
+  max-width: $gridSize;
+  max-height: $gridSize;
+
+  @apply flex
+    flex-col
+    w-full
+    border
+    border-stone-200
+    rounded-md
+    overflow-hidden;
+}
+
+.row {
+  @apply flex flex-row;
+
+  @each $size in consts.$sizes {
+    &.size-#{$size} {
+      @apply h-1/#{$size};
+    }
+  }
+}

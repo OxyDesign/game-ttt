@@ -1,8 +1,11 @@
 import React from 'react';
+import { Game } from './components';
 import styles from './App.module.scss';
 
-function App() {
-  return <div className={styles.app}>Content</div>;
-}
+const App = () => (
+  <div className={styles.app}>
+    <Game />
+  </div>
+);
 
 export default App;

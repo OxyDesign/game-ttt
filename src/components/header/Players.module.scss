@@ -1,0 +1,29 @@
+.players {
+  @apply flex justify-start;
+}
+
+.player {
+  @apply py-1.5 px-3 bg-stone-100 text-stone-700;
+
+  &:first-child {
+    @apply rounded-l;
+  }
+
+  &:last-child {
+    @apply rounded-r;
+  }
+}
+
+.activePlayer {
+  &.x {
+    @apply bg-pink-50 text-pink-700;
+  }
+
+  &.o {
+    @apply bg-cyan-50 text-cyan-700;
+  }
+}
+
+.winner {
+  @apply bg-emerald-50 text-emerald-700;
+}

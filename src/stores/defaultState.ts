@@ -1,14 +1,12 @@
-import { Grid } from '../shared/types';
+import { AppState } from '../shared/types';
+import { gameSizes } from '../shared/constants';
 import { createEmptyGrid } from '../utils';
 
-export interface DefaultState {
-    v: number;
-    size: 3 | 4 | 5 | 6;
-    grid: Grid,
-}
+const smallestSize = gameSizes[0];
 
-export const defaultState: DefaultState = {
-    v: 1,
-    size: 3,
-    grid: createEmptyGrid(3)
+export const defaultState: AppState = {
+  v: 3,
+  size: smallestSize,
+  player: 'x',
+  grid: createEmptyGrid(smallestSize),
 };

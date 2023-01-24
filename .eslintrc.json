@@ -1,23 +1,26 @@
 {
-    "extends": [
-        "airbnb",
-        "airbnb/hooks",
-        "airbnb-typescript",
-        "prettier"
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "prettier"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "react/react-in-jsx-scope": "off",
+    "import/prefer-default-export": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
     ],
-    "parserOptions": {
-        "project": "./tsconfig.json"
-    },
-    "rules": {
-        "arrow-body-style": ["error", "as-needed"],
-        "react/react-in-jsx-scope": "off",
-        "import/prefer-default-export": "off",
-        "react/function-component-definition": [
-            2,
-            {
-              "namedComponents": "arrow-function",
-              "unnamedComponents": "arrow-function"
-            }
-          ]
-        }
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-param-reassign": ["error", { "props": false }],
+    "no-nested-ternary": "off"
+  }
 }
